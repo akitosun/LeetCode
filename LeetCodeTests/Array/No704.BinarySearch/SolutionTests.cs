@@ -13,11 +13,7 @@ namespace LeetCode.Array.No704.BinarySearch.Tests
     [TestClass()]
     public class SolutionTests
     {
-        [TestMethod()]
-        public void SearchTest()
-        {
-            Assert.Fail();
-        }
+        
         
     }
 }

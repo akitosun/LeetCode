@@ -14,24 +14,15 @@ namespace LeetCode.Array.No1089.DuplicateZeros
     {
         public void DuplicateZeros(int[] arr)
         {
-            var zeros = arr.Count(x=>x==0);
-            
-            var len = arr.Length - 1;
-
-            while (len > 0 && zeros > 0)
+            var list = new List<int>();
+            for (var i = 0; i < arr.Length; i++)
             {
-                if (len + zeros <= arr.Length - 1)
+                if (arr[i] == 0)
                 {
-                    arr[len + zeros] = arr[len];
+                    list.Add(0);
                 }
-
-                if (arr[len] == 0)
-                {
-                    zeros--;
-                }
-
-                arr[len] = 0;
-                len--;
+                list.Add(arr[i]);
+                arr[i] = list[i];
             }
         }
     }
